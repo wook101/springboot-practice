@@ -7,6 +7,9 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class CartoonsSearchResolver implements HandlerMethodArgumentResolver {
 
 
@@ -24,9 +27,15 @@ public class CartoonsSearchResolver implements HandlerMethodArgumentResolver {
         String genre = nativeWebRequest.getParameter("genre");
         String finished = nativeWebRequest.getParameter("finished");
 
+        if (date==null){
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            date = sdf.format(new Date());
+        }
+        //null일 경우 분기처리
         System.out.println(date);
         System.out.println(genre);
         System.out.println(finished);
+
 
         return cartoonsSearch;
     }

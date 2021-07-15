@@ -17,6 +17,8 @@ public class TestController {
         return "홈화면 입니다.";
     }
 
+
+    //http://localhost:8080/api/cartoons?date=20210713&genre=music&finished=false 요청
     @GetMapping("/cartoons")
     @ResponseBody
     public String cartoons(CartoonsSearch cartoonsSearch){
