@@ -12,4 +12,7 @@
 2. application.yml 설정 (h2 console, datasource)   
 3. schema.sql 파일에 ddl정의, data.sql파일에 dml정의       
 4. initialization-mode: always 옵션을 주면 springboot가 실행될 때 마다 db초기화   
-
+   
+   
+[SpringJdbc 사용하기]   
+1. 
