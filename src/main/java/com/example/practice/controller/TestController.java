@@ -22,7 +22,6 @@ public class TestController {
     @GetMapping("/cartoons")
     @ResponseBody
     public String cartoons(CartoonsSearch cartoonsSearch){
-
         return "웹툰 테스트입니다.";
     }
 

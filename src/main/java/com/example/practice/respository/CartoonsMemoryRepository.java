@@ -9,12 +9,12 @@ import org.springframework.stereotype.Repository;
 import javax.sql.DataSource;
 
 @Repository
-public class CartoonsRepository {
+public class CartoonsMemoryRepository {
 
     private NamedParameterJdbcTemplate jdbc;
     private RowMapper<CartoonsSearch> rowMapper = BeanPropertyRowMapper.newInstance(CartoonsSearch.class);
 
-    public CartoonsRepository(DataSource dataSource){
+    public CartoonsMemoryRepository(DataSource dataSource){
         this.jdbc = new NamedParameterJdbcTemplate(dataSource);
     }
 
