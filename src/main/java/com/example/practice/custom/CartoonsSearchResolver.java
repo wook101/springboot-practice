@@ -27,15 +27,22 @@ public class CartoonsSearchResolver implements HandlerMethodArgumentResolver {
         String genre = nativeWebRequest.getParameter("genre");
         String finished = nativeWebRequest.getParameter("finished");
 
+
+        //요청 파라미터가 null일 경우 처리하기
         if (date==null){
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             date = sdf.format(new Date());
         }
-        //null일 경우 분기처리
-        System.out.println(date);
-        System.out.println(genre);
-        System.out.println(finished);
+        if (finished==null){
+            finished = "false";
+        }
+        if (genre==null){
+            genre = "%";
+        }
 
+        cartoonsSearch.setDate(date);
+        cartoonsSearch.setGenre(genre);
+        cartoonsSearch.setFinished(finished);
 
         return cartoonsSearch;
     }

@@ -33,4 +33,12 @@ public class CartoonsSearch {
         return finished;
     }
 
+    @Override
+    public String toString() {
+        return "CartoonsSearch{" +
+                "date='" + date + '\'' +
+                ", genre='" + genre + '\'' +
+                ", finished='" + finished + '\'' +
+                '}';
+    }
 }

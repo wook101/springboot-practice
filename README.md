@@ -15,4 +15,7 @@
    
    
 [SpringJdbc 사용하기]   
-1. 
+1. NamedParameterJdbcTemplate를 생성하여 dataSource와 연결한다.   
+2. jdbc템플릿이 제공하는 메소드를 이용하여 CRUD를 구현한다.   
+
+
