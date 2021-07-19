@@ -17,5 +17,9 @@
 [SpringJdbc 사용하기]   
 1. NamedParameterJdbcTemplate를 생성하여 dataSource와 연결한다.   
 2. jdbc템플릿이 제공하는 메소드를 이용하여 CRUD를 구현한다.   
+   
+   
+[ResponseEntity 사용하기]   
+1. 컨트롤러에서 메소드의 리턴 값으로 메시지+상태코드를 담아 json응답을 처리한다.   
 
 
